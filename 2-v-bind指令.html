@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 需要引入的依赖库 -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <span v-bind:title="title">这是一个标题啊</span>
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el:"#root",
+        data:{
+            title:"被发现了"
+        }
+    })
+</script>
+</html>

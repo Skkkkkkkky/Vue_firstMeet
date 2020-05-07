@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{list-style-type: none;}
+    </style>
+    <!-- 按照惯例 -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <ul>
+            <!-- 
+                固定格式不可更改 其中的words为数据集合
+                v-key 最好加上
+             -->
+            <li v-for="item,index in words" v-key="index">{{index}}:{{item.text}}</li>
+        </ul>
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el:"#root",
+        data:{
+            words:[
+                {text:"键盘敲烂，薪资过万"},
+                {text:"敲代码是一件非常快乐的事情"},
+                {text:"整活了整活了"}
+            ]
+        }
+    })
+</script>
+</html>

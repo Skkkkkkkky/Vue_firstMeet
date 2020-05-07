@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 按照惯例 -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <!-- v-if如果不显示会隐藏所有 -->
+        <b v-if="condition">{{ message }}</b>
+        <br>
+        <!-- v-show还是会找到标签只是有display=none属性 -->
+        <b v-show="condition">{{ message }}</b>
+    </div>
+
+</body>
+<script>
+    let vm = new Vue({
+        el:"#root",
+        data:{
+            condition:false,
+            message:"大哥大嫂过年好！！你是我的爷我是你的儿！"
+        }
+    })
+</script>
+
+</html>

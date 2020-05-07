@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 按照惯例先引入依赖库 -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script>
+</head>
+
+<body>
+    <button id="btn">按钮一</button>
+    <div id="root">
+        <button onclick="clickFunc()">按钮二</button>
+        <button v-on:click="btnClick">按钮三</button>
+        <img v-bind:src="src" id="img">
+    </div>
+
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click", function () {
+        alert("转危为安");
+    })
+    function clickFunc() {
+        alert("危");
+    }
+    let vm = new Vue({
+        el: "#root",
+        data: {
+            src: ""
+        },
+        methods: {
+            btnClick: function () {
+                this.src = "http://img3.cache.netease.com/photo/0026/2016-09-22/C1J71ODR3ONH0026.jpg"
+            }
+        }
+    })
+</script>
+
+</html>

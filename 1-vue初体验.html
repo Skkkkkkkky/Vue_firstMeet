@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 需要引入的依赖库 -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <b>{{ message }}</b>
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el:"#root",
+        data:{
+            message:"大哥大嫂过年好！！！"
+        }
+    })
+</script>
+</html>
